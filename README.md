@@ -86,3 +86,22 @@
 ### img.foto.jpg | product.html
 ### img.foto2.jpg | product.html
 ### img.foto3.jpg | product.html
+
+# Posttest 4
+
+### 1. Create 
+![Uploading create.jpg…]()
+
+### 2. Read 
+![Uploading read.jpg…]()
+
+### 3. Read data di User
+![Uploading read_tampilanUser.jpg…]()
+
+### 4. Update
+![Uploading update.jpg…]()
+
+### 5. Delete
+![Uploading delete.jpg…]()
+
+
