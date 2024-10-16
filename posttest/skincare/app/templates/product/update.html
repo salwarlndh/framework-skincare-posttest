@@ -1,0 +1,12 @@
+{% extends 'homepage/layout.html' %} {% block title %} Update Product
+{% endblock %} {% block content %}
+  <div class="container">
+    <div class="d-flex align-items-center justify-content-between">
+      <h1>Update Product : {{ product.name }}</h1>
+      <a href="{% url 'product_index' %}" class="btn btn-secondary">Back</a>
+    </div>
+    <form class="needs-validation" method="POST">
+      {% include 'product/form.html' %}
+    </form>
+  </div>
+{% endblock %}

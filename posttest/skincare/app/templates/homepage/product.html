@@ -5,53 +5,34 @@
     {% block content %}
     <div class="hero bg-light p-3 rounded-lg m-3">
         <h1 class="display-6">Recommendation for you ♡ </h1>
+        <form method="GET" action="{% url 'product_index2' %}" class="d-flex mb-3">
+          <input class="form-control me-2" type="search" name="q" placeholder="Find products..." value="{{ query|default:'' }}" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Find</button>
+        </form>
     </div> 
 
-    <div class="container">
-        <div class="row row-cols-4">
-          <div class="col">
-            <div class="card" style="width: 18rem;">
-                <img src="{% static 'img/moist.jpg' %}" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Moisturizer</h5>
-                  <p class="card-text">A moisturizer is a skincare product designed to hydrate and protect the skin by replenishing its moisture levels.</p>
-                  <a href="#" class="btn btn-link">Purchase</a>
-                </div>
-            </div>
-          </div>
-
-          <div class="col">
-            <div class="card" style="width: 18rem;">
-                <img src="{% static 'img/foto3.jpg' %}" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Moisturizer</h5>
-                  <p class="card-text">A moisturizer is a skincare product designed to hydrate and protect the skin by replenishing its moisture levels.</p>
-                  <a href="#" class="btn btn-link">Purchase</a>
-                </div>
-            </div>
-          </div>
-          
-          <div class="col">
-            <div class="card" style="width: 18rem;">
-                <img src="{% static 'img/foto2.jpg' %}" >
-                <div class="card-body">
-                  <h5 class="card-title">Moisturizer</h5>
-                  <p class="card-text">A moisturizer is a skincare product designed to hydrate and protect the skin by replenishing its moisture levels.</p>
-                  <a href="#" class="btn btn-link">Purchase</a>
-                </div>
-            </div>
-          </div>
-
-          <div class="col">
-            <div class="card" style="width: 18rem;">
-                <img src="{% static 'img/foto.jpg' %}" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Moisturizer</h5>
-                  <p class="card-text">A moisturizer is a skincare product designed to hydrate and protect the skin by replenishing its moisture levels.</p>
-                  <a href="#" class="btn btn-link">Purchase</a>
-                </div>
+    <div class="row">
+      {% for product in product %}
+        <div class="col-md-3 mb-4">
+          <div class="card" style="width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title">{{ product.name }}</h5>
+              <h6 class="card-text mb-3">{{ product.description }}</h6>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Price: Rp {{ product.price }} </li>
+                <li class="list-group-item">Stock: {{ product.stock }} pcs</li>
+              </ul>
+              <div class="card-body">
+                <a href="#" class="card-link" style="color: rgb(229, 196, 209)">Purchase</a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      {% empty %}
+        <div class="col-12">
+          <div class="alert alert-info text-center">No Products Available</div>
+        </div>
+      {% endfor %}
+    </div>
+    
     {% endblock %}
