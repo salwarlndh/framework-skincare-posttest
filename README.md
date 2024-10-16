@@ -90,18 +90,19 @@
 # Posttest 4
 
 ### 1. Create 
-![Uploading create.jpg…]()
+![create](https://github.com/user-attachments/assets/a03d8959-2a5a-42f3-b45c-566311be9573)
 
 ### 2. Read 
-![Uploading read.jpg…]()
+![read](https://github.com/user-attachments/assets/68c5a216-f10c-41e5-8bd6-3a5a1bc9b97d)
 
 ### 3. Read data di User
-![Uploading read_tampilanUser.jpg…]()
+![read_tampilanUser](https://github.com/user-attachments/assets/a739d9f5-44b9-4db8-87eb-b981cabe90ca)
 
 ### 4. Update
-![Uploading update.jpg…]()
+![update](https://github.com/user-attachments/assets/898018a8-9b78-4917-ad02-0da08e021479)
 
 ### 5. Delete
-![Uploading delete.jpg…]()
+![delete](https://github.com/user-attachments/assets/3cc41984-1a6f-48a7-b6e4-09f6b47fbf10)
+
 
 
